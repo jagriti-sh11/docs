@@ -1,153 +1,154 @@
 ---
-title: "Introduction"
-description: "What Infobase is, how it works, limitations, and FAQ."
+title: "はじめに"
+description: "Infobase の概要、制限事項、よくある質問。"
 icon: book
 ---
 
-## What is Infobase?
+## Infobase とは
 
-**Infobase** is OneInbox's knowledge management layer. It stores information from **websites** and **uploaded documents** in **folders**, so **AI voice agents** can use that content during live phone conversations.
+**Infobase** は OneInbox のナレッジ管理機能です。**Web サイト** と **アップロードしたドキュメント** を **フォルダ** にまとめ、**AI 音声エージェント** が通話中にその内容を参照できるようにします。
 
 <Note>
-  Infobase is organized into **folders**. Each folder can contain website URLs and uploaded files. You attach an entire folder to one or more agents — not individual files one-by-one on the agent.
+  Infobase は **フォルダ** 単位で管理します。各フォルダに URL とファイルを混在させ、フォルダ全体を 1 つ以上のエージェントに添付します（エージェントごとにファイルを 1 件ずつ選ぶ方式ではありません）。
 </Note>
 
-### What Infobase is
+### Infobase でできること
 
-- A **folder-based knowledge library** for your agents
-- A way to combine **web pages** and **files** in one place
-- A bridge between your content and **agent behavior on calls**
+- エージェント向けの **ナレッジライブラリ**（フォルダ）の作成
+- **Web ページ** と **ファイル** の一元管理
+- コンテンツと **通話時のエージェント応答** の連携
 
 ---
 
-## How Infobase works
+## 全体の流れ
 
 ```mermaid
 flowchart LR
-  A[Create folder] --> B[Add website or file]
-  B --> C[System indexes content]
-  C --> D[Status: Ready]
-  D --> E[Attach folder to agent]
-  E --> F[Agent uses knowledge on calls]
+  A[フォルダ作成] --> B[Web またはファイル追加]
+  B --> C[システムがインデックス]
+  C --> D[ステータス: Ready]
+  D --> E[エージェントに添付]
+  E --> F[通話でナレッジ参照]
 ```
 
-1. You **create a folder** in the Infobase screen.
-2. You **add sources** — website URLs or uploaded files.
-3. The **system crawls or parses** content and builds a searchable index (**In Progress** → **Ready**).
-4. You **attach the folder** to an agent in the Agent **Role** tab.
-5. During **live calls**, the agent retrieves relevant knowledge from that folder.
+1. Infobase 画面で **フォルダを作成**します。
+2. **Web サイトの URL** または **ファイル** を追加します。
+3. **システムがクロール／解析**し、検索可能な状態にします（**In Progress** → **Ready**）。
+4. エージェントの **Role** タブで **フォルダを添付**します。
+5. **通話中**、エージェントがフォルダ内のナレッジを参照します。
 
-You do not manually "train" a model in Infobase. You **supply sources** and wait until they are **Ready**.
+Infobase 上でモデルを手動「学習」する操作はありません。**ソースを登録**し、**Ready** になるまで待ちます。
 
 ---
 
-## Your work and automatic processing
+## 操作と自動処理
 
-### What you do in OneInbox
+### ご自身で行うこと
 
-- **Folders** — Create, organize, and delete Infobase folders
-- **Websites** — Add URLs and choose which pages to include
-- **Files** — Upload PDF, DOCX, PPTX, TXT, or CSV
-- **Status** — Watch the folder list and use **↻ refresh** when you need an update
-- **Website changes** — Refresh manually after your live site changes (OneInbox does not re-crawl on its own)
-- **Team** — Optionally assign users to a folder (based on your org’s permissions)
-- **Agents** — Attach a folder on the agent **Role** tab
-- **Cleanup** — Delete individual files or entire folders
+- **フォルダ** — Infobase フォルダの作成・整理・削除
+- **Web サイト** — URL の登録とインデックス対象ページの選択
+- **ファイル** — PDF、DOCX、PPTX、TXT、CSV のアップロード
+- **ステータス** — フォルダ一覧の確認、必要に応じて **↻ 更新**
+- **Web サイトの変更** — 公開サイト変更後は手動で更新（自動再クロールはありません）
+- **チーム** — 必要に応じてフォルダにユーザーを割り当て（組織の権限に従います）
+- **エージェント** — エージェントの **Role** タブでフォルダを添付
+- **ダウンロード** — ファイル名横のアイコンからアップロード済みファイルを保存
+- **削除** — 個別ファイルまたはフォルダ全体の削除
 
-### What OneInbox handles for you
+### OneInbox が自動で行うこと
 
-- Crawls and indexes the website pages you selected
-- Parses and indexes uploaded files
-- Processes each source (**In Progress** → **Ready**)
-- Re-indexes when you re-upload a file or refresh a folder
-- Supplies that knowledge to agents during live calls
-- Removes indexed content when you delete a source
+- 選択した Web ページのクロールとインデックス
+- アップロードファイルの解析とインデックス
+- 各ソースの処理（**In Progress** → **Ready**）
+- 再アップロードまたはフォルダ更新時の再インデックス
+- 通話中のエージェントへのナレッジ提供
+- ソース削除時のインデックス除去
 
 <Note>
-  **Editing files:** You cannot change uploaded file content inside OneInbox. Edit the file in your usual app, then **re-upload** it to the same folder and wait until it is **Ready**.
+  **ファイルの編集：** OneInbox 上ではアップロード済みファイルの本文は編集できません。通常のツールで修正し、同じフォルダに**再アップロード**して **Ready** になるまでお待ちください。
 </Note>
 
 ---
 
-## Supported upload formats
+## 対応アップロード形式
 
-You can upload the following file types to an Infobase folder:
+Infobase フォルダにアップロードできる形式は次のとおりです。
 
-| Format | Type |
+| 形式 | 種類 |
 | --- | --- |
-| **PDF** | Documents |
+| **PDF** | 文書 |
 | **DOCX** | Microsoft Word |
 | **PPTX** | Microsoft PowerPoint |
-| **TXT** | Plain text |
-| **CSV** | Tabular data |
+| **TXT** | テキスト |
+| **CSV** | 表形式データ |
 
 ---
 
-## Editing uploaded files
+## アップロード済みファイルの編集
 
-To change document content:
+内容を変更する場合:
 
-1. Edit the file in your usual tool (Microsoft Word, PowerPoint, Acrobat, etc.).
-2. **Re-upload** the revised file to the same Infobase folder in OneInbox.
-3. Wait until status is **Ready**.
-4. If the folder is attached to agents, allow indexing to finish before expecting updated answers on calls.
+1. Word、PowerPoint、Acrobat など**社内の通常ツール**でファイルを修正します。
+2. 同じ Infobase フォルダに**修正版を再アップロード**します。
+3. ステータスが **Ready** になるまで待ちます。
+4. エージェントにフォルダを添付済みの場合は、インデックス完了後に通話内容へ反映されます。
 
-You may delete the older file row after re-uploading if you want to avoid duplicate entries in the folder list.
-
----
-
-## Website content updates
-
-When a live website changes (new pages, revised copy, removed URLs):
-
-- OneInbox does **not** automatically re-crawl or sync website content in the background.
-- You must use the **manual refresh icon (↻)** next to the folder status to check and update processing status.
-- If the site structure changed significantly, you may need to add URLs again or adjust which pages are indexed.
+一覧に同じファイルが重複する場合は、古い行を削除して整理できます。
 
 ---
 
-## Other limitations
+## Web サイトの内容更新
 
-### Processing and agents
+公開中の Web サイトが変更された場合（ページ追加、文言変更、URL 削除など）:
 
-- Sources with **In Progress** status are **not fully available** to agents.
-- Attaching a folder before all items are **Ready** can cause **incomplete** answers on calls.
-
-### Websites
-
-- Crawling depends on how the site is built. Login-only pages, heavy JavaScript apps, or blocked crawlers may not index fully.
-
-### Deletion
-
-- Deleting a file removes it from the folder and from agent knowledge.
-- Deleting a folder removes **all** content inside. Detach the folder from agents first to avoid orphaned attachments.
-
-### Permissions
-
-- Who can create folders, assign users, or delete content may depend on your organization's OneInbox roles. Contact your administrator if an action is unavailable.
+- OneInbox は**バックグラウンドで自動的に再クロールしません**。
+- フォルダ上部のステータス横にある **↻（手動更新）** で処理状況を確認・更新してください。
+- サイト構成が大きく変わった場合は、URL の再登録やインデックス対象ページの見直しが必要になることがあります。
 
 ---
 
-## Frequently asked questions
+## その他の制限事項
+
+### 処理とエージェント
+
+- **In Progress** のソースは、エージェントが**十分に参照できません**。
+- すべて **Ready** になる前にエージェントへ添付すると、通話時の回答が**不完全**になることがあります。
+
+### Web サイト
+
+- ログイン必須ページ、JavaScript 中心のサイト、クローラー拒否などにより、すべてのページが取得できない場合があります。
+
+### 削除
+
+- ファイルを削除すると、フォルダおよびエージェントのナレッジから除去されます。
+- フォルダ削除は**中身すべて**が削除されます。事前にエージェントから添付を外すことを推奨します。
+
+### 権限
+
+- フォルダ作成、ユーザー割り当て、削除などができるかは組織の OneInbox 権限によります。操作できない場合は管理者にお問い合わせください。
+
+---
+
+## よくある質問
 
 <AccordionGroup>
-  <Accordion title="Can I edit a PDF or Word file inside OneInbox?">
-    No. Edit the file externally, then **re-upload** it.
+  <Accordion title="PDF や Word を OneInbox 内で編集できますか？">
+    いいえ。外部で編集し、**再アップロード**してください。
   </Accordion>
-  <Accordion title="Does the platform automatically update when our website changes?">
-    No. Use **manual refresh (↻)** on the folder. Re-add or adjust URLs if the site structure changed.
+  <Accordion title="Web サイトを更新したら自動で反映されますか？">
+    いいえ。**手動で ↻ 更新**してください。構成が変わった場合は URL の再登録が必要な場合があります。
   </Accordion>
-  <Accordion title="Can I upload PowerPoint files?">
-    Yes. **PPTX** is supported along with PDF, DOCX, TXT, and CSV.
+  <Accordion title="PowerPoint（PPTX）は使えますか？">
+    はい。**PPTX** は PDF、DOCX、TXT、CSV とあわせて対応しています。
   </Accordion>
-  <Accordion title="When can agents use new content?">
-    After the file or URL shows **Ready**. If the folder is already attached to an agent, indexing must complete first.
+  <Accordion title="いつからエージェントが新しい内容を使えますか？">
+    該当ソースが **Ready** になってからです。フォルダ添付済みの場合も、インデックス完了を待ってください。
   </Accordion>
-  <Accordion title="What is the difference between a folder and an agent?">
-    A **folder** holds knowledge sources. An **agent** is your voice AI configuration. You **attach** folders to agents so calls can use that knowledge.
+  <Accordion title="フォルダとエージェントの違いは？">
+    **フォルダ**はナレッジの入れ物、**エージェント**は音声 AI の設定です。フォルダをエージェントに**添付**して通話で使います。
   </Accordion>
 </AccordionGroup>
 
-<Card title="Step-by-step guide" icon="list-ol" href="/user-guide">
-  Step-by-step instructions from opening Infobase through attach and delete.
+<Card title="操作手順" icon="list-ol" href="/ja/user-guide">
+  Infobase の画面操作をステップごとに説明します。
 </Card>

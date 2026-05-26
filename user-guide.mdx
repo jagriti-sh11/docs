@@ -1,262 +1,250 @@
 ---
-title: "Step-by-step guide"
-description: "Create folders, add content, attach agents, and delete Infobase items."
+title: "操作手順"
+description: "フォルダ作成、コンテンツ追加、エージェント添付、削除の手順。"
 icon: list-ol
 ---
 
 <Note>
-  See the [Introduction](/index) for overview, limitations, and FAQ.
+  概要・制限事項・FAQ は<a href="/ja/index">はじめに</a>をご覧ください。
 </Note>
 
-## Step 1: Navigate to Infobase
+## ステップ 1: インフォベース画面を開く
 
-From the left sidebar, click the **Infobase icon** (stacked layers icon at the bottom of the nav). You will land on the Infobase section, which displays all your folders and the files inside them.
+左サイドバーの **データベースアイコン**（インフォベース）をクリックします。フォルダ一覧と各フォルダ内のファイルが表示されます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_39_43.png"
-  alt="Infobase overview showing the Business folder with one file in progress"
+  src="/images/ja/ja_step1_overview.png"
+  alt="Business フォルダのインフォベース一覧（日本語 UI）"
 />
 
-> In this example, the **Business** folder contains one file — `Webinar_AI SDR Workshop.pptx` — with a status of **In Progress**, meaning it is still being processed.
+> 例では **Business** フォルダに複数のファイルと URL があり、ステータスは **進行中** と表示されています。
 
 ---
 
-## Step 2: Add a Folder
+## ステップ 2: フォルダを作成する
 
-Before adding websites or files, create a folder to organize your knowledge base.
+Web サイトやファイルを追加する前に、ナレッジを整理するフォルダを作成します。
 
-1. In the left **Infobases** menu panel, click the **+** button next to the **Infobases** heading.
-2. Enter a name for your folder (for example, `Business` or `Product Docs`).
-3. Confirm to create the folder.
+1. 左の **インフォベース** メニューで、見出し横の **+** をクリックします。
+2. フォルダ名を入力します（例: `Business`、`Product Docs`）。
+3. 作成を確定します。
 
-The new folder appears in the Infobases list on the left. Click the folder to open it in the main view — you will add content in the next step.
+新しいフォルダが左の Infobases 一覧に表示されます。フォルダをクリックしてメイン画面を開き、次のステップでコンテンツを追加します。
 
 <img
   src="/images/Screenshot_add_folder_menu.png"
-  alt="Infobases panel with the plus button next to the Infobases heading to create a new folder"
+  alt="Infobases 見出し横のプラスボタンで新規フォルダを作成"
 />
 
 ---
 
-## Step 3: Add Information to a Folder
+## ステップ 3: フォルダに情報を追加する
 
-Open the folder you created, then click **+ Add Info** in the top-right corner of the folder view.
+作成したフォルダを開き、フォルダ画面右上の **+ 情報追加** をクリックします。
 
-A modal will appear with two options:
+モーダルに 2 つの選択肢が表示されます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_39_53.png"
-  alt="Add Info modal with Website and Upload File options"
+  src="/images/ja/ja_step3_add_info_modal.png"
+  alt="ウェブサイトとファイルアップロードの情報追加モーダル（日本語 UI）"
 />
 
-| Option | Description |
+| 選択肢 | 説明 |
 |---|---|
-| **Website** | Provide a URL — OneInbox will crawl and index the pages automatically |
-| **Upload File** | Upload a document (PDF, DOCX, PPTX, TXT, or CSV) |
+| **ウェブサイト** | URL を指定 — OneInbox がページをクロールしてインデックスします |
+| **ファイルアップロード** | 文書をアップロード（PDF、DOCX、PPTX、TXT、CSV） |
 
-Select the appropriate option and click **Next**.
+該当する選択肢を選び **次へ** をクリックします。
 
 ---
 
-## Step 4a: Add a Website
+## ステップ 4a: Web サイトを追加する
 
-If you select **Website**, you will be prompted to enter a URL.
+**ウェブサイト** を選ぶと URL の入力画面が表示されます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_40_12.png"
-  alt="URL input field with https://oneinbox.ai/ entered"
+  src="/images/ja/ja_step4a_add_url.png"
+  alt="URL 入力画面（情報追加・日本語 UI）"
 />
 
-Enter the root domain or a specific page URL and click **Next**. OneInbox will crawl the site and return a list of all discoverable pages.
+ルートドメインまたは特定ページの URL を入力し **次へ** をクリックします。クロール後、検出されたページ一覧が表示されます。
 
-### Select Pages to Index
+### インデックスするページを選択
 
-After crawling, a checklist of all found URLs will appear. By default, all pages are selected.
+クロール後、URL のチェックリストが表示されます。初期状態では多くの場合すべて選択されています。
 
 <img
   src="/images/Screenshot_2026-05-26_at_12_40_24.png"
-  alt="URL selection list with checkboxes"
+  alt="チェックボックス付きの URL 選択一覧"
 />
 
-- Use **Select all** to include every page, or manually check/uncheck individual URLs.
-- Use the **Filter URLs** field to search for specific pages within the list.
+- **Select all** で全ページを含めるか、個別にチェックを入れ外しします。
+- **Filter URLs** で一覧内を検索できます。
 
-Click **Next** to confirm your selection.
+**Next** で選択を確定します。
 
 <img
   src="/images/Screenshot_2026-05-26_at_12_40_34.png"
-  alt="Confirmed URL list with green checkmarks and options to add more sources"
+  alt="緑のチェックマーク付きで確定した URL 一覧"
 />
 
 <Tip>
-  You can continue adding more sources (additional websites or files) from this same screen before clicking **Next** to finalize.
+  同じ画面から追加の Web サイトやファイルを続けて登録してから **Next** で確定できます。
 </Tip>
 
 ---
 
-## Step 4b: Upload a File
+## ステップ 4b: ファイルをアップロードする
 
-If you select **Upload File**, click the **Upload File** card and your system file picker will open.
-
-<img
-  src="/images/Screenshot_2026-05-26_at_12_44_26.png"
-  alt="Add Info modal with Upload File option highlighted"
-/>
+**ファイルアップロード** を選ぶと **ファイルアップロード** カードをクリックし、OS のファイル選択ダイアログが開きます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_44_50.png"
-  alt="macOS file picker with Oneinbox.pdf selected"
+  src="/images/ja/ja_step4b_file_picker.png"
+  alt="Oneinbox.pdf を選択したファイル選択ダイアログ"
 />
 
-Select the file you want to upload (supported formats: **PDF, DOCX, PPTX, TXT, CSV**) and click **Open**.
+アップロードするファイル（**PDF、DOCX、PPTX、TXT、CSV**）を選び **開く** をクリックします。
 
-The file will appear in the modal with a green checkmark confirming it has been staged for upload.
+モーダルに緑のチェックマーク付きでアップロード待ちとして表示されます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_44_57.png"
-  alt="Add Info modal showing Oneinbox.pdf staged with a checkmark"
+  src="/images/ja/ja_step4b_upload_staged.png"
+  alt="Oneinbox.pdf がチェックマーク付きの情報追加モーダル（日本語 UI）"
 />
 
-Click **Next** to confirm and begin processing.
+**次へ** で確定し、処理を開始します。
 
 ---
 
-## Step 5: Monitor Processing Status
+## ステップ 5: 処理ステータスを確認する
 
-Once sources are submitted, you will be returned to the folder view. All newly added files and URLs will appear in the list with one of the following statuses:
+ソース送信後、フォルダ画面に戻ります。追加したファイルと URL は次のいずれかのステータスで表示されます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_44_13.png"
-  alt="Infobase folder showing 60 files all with In Progress status"
+  src="/images/ja/ja_step5_status.png"
+  alt="進行中ステータスのファイル一覧（日本語 UI）"
 />
 
-| Status | Meaning |
+| ステータス | 意味 |
 |---|---|
-| **In Progress** | Content is currently being crawled or processed |
-| **Ready** | Content has been indexed and is available for agent use |
+| **進行中** | クロールまたは処理の途中 |
+| **Ready** | インデックス完了。エージェントが利用可能 |
 
-<img
-  src="/images/Screenshot_2026-05-26_at_12_46_18.png"
-  alt="Infobase folder showing Oneinbox.pdf as Ready and URLs as Ready"
-/>
+### ステータスの更新（手動）
 
-### Refreshing status (manual)
-
-OneInbox does **not** automatically re-sync website content when a live site changes. To check processing status or pick up updates after you have changed sources, click the **refresh icon (↻)** next to the status badge at the top of the folder.
-
-<img
-  src="/images/Screenshot_2026-05-26_at_12_46_49.png"
-  alt="Refresh status tooltip visible on hover over the refresh icon"
-/>
+公開中の Web サイトが変更されても、OneInbox は**自動で再同期しません**。処理状況の確認やソース変更後の反映には、フォルダ上部の **↻**（更新アイコン）をクリックしてください。
 
 ---
 
-## Step 6: Assign Users to a Folder (Optional)
+## ステップ 6: ファイルをダウンロードする
 
-You can assign team members to a specific Infobase folder. Click the **+** icon next to the refresh button to open the user assignment dropdown.
+アップロード済みのファイル（PDF、PPTX など）は、フォルダ一覧から元ファイルをダウンロードできます。Web サイトの URL 行にはダウンロードアイコンは表示されません。
+
+1. フォルダを開き、**ファイル** 列で対象の文書名を探します。
+2. ファイル名の右側にある **ダウンロードアイコン**（下向き矢印）をクリックします。
+3. ブラウザの保存ダイアログで保存先を選びます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_49_18.png"
-  alt="Assign user tooltip visible on hover over the plus icon"
+  src="/images/ja/ja_download_file.png"
+  alt="ダウンロードツールチップ付きのファイル行（日本語 UI）"
 />
 
-<img
-  src="/images/Screenshot_2026-05-26_at_12_49_36.png"
-  alt="User assignment dropdown showing a list of team members and agents"
-/>
-
-Select one or more users from the dropdown. This is useful for access control and team ownership of specific knowledge bases.
+<Tip>
+  ダウンロードできるのはアップロードしたファイルのみです。インデックス済みの Web ページは外部リンクアイコンからブラウザで開けます。
+</Tip>
 
 ---
 
-## Step 7: Attach an Infobase to an Agent
+## ステップ 7: フォルダにユーザーを割り当てる（任意）
 
-Once your Infobase folder is ready, you can attach it to any agent.
-
-1. Navigate to **Agents** from the left sidebar.
-2. Select the agent you want to configure.
-3. Go to the **Role** tab.
-4. On the right side, locate the **Add attachment** panel.
-5. Click **Select file** and choose the Infobase folder from the dropdown.
+チームメンバーをフォルダに割り当てられます。更新ボタン横の **+** をクリックして **ユーザーを割り当て** を開きます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_51_11.png"
-  alt="Agent Role tab showing the Add Attachment panel with Business infobase available"
+  src="/images/ja/ja_step6_assign_user.png"
+  alt="ユーザーを割り当てドロップダウン（日本語 UI）"
 />
 
-The folder will appear listed under attachments.
+ドロップダウンから 1 名以上を選択します。アクセス制御や担当整理に利用できます。
+
+---
+
+## ステップ 8: エージェントにインフォベースを添付する
+
+フォルダの準備ができたら、任意のエージェントに添付します。
+
+1. 左サイドバーから **エージェント**（ロボットアイコン）を開きます。
+2. 設定するエージェントを選択します。
+3. **ロール** タブを開きます。
+4. 右側の **添付ファイル追加** パネルを確認します。
+5. **ファイルを選択** をクリックし、ドロップダウンからインフォベースフォルダを選びます。
 
 <img
-  src="/images/Screenshot_2026-05-26_at_12_51_18.png"
-  alt="Agent Role tab with Business infobase successfully attached"
+  src="/images/ja/ja_step8_agent_role.png"
+  alt="ロールタブで Business フォルダを添付（日本語 UI）"
 />
 
-6. Click **Save** to apply the changes.
-
-<img
-  src="/images/Screenshot_2026-05-26_at_12_51_29.png"
-  alt="Agent page with Save button in loading state after attaching Business infobase"
-/>
+6. **保存** で変更を保存します。
 
 <Check>
-  Your agent will now reference the Infobase content during live conversations.
+  エージェントは通話中に Infobase の内容を参照できるようになります。
 </Check>
 
 ---
 
-## Step 8: Delete a File
+## ステップ 9: ファイルを削除する
 
-To remove a single file or URL from a folder, open the folder and find the item in the list.
+フォルダ内の 1 件のファイルまたは URL を削除する場合:
 
-1. Hover over the row you want to remove.
-2. Click the **trash icon** on the far right of that row.
-3. Confirm the deletion when prompted.
+1. フォルダを開き、対象行を探します。
+2. 行にマウスを合わせ、右端の **ゴミ箱アイコン** をクリックします。
+3. 確認ダイアログで削除を確定します。
 
 <img
-  src="/images/Screenshot_delete_file.png"
-  alt="Infobase file list with delete trash icon on a row"
+  src="/images/ja/ja_step9_delete_file.png"
+  alt="削除ツールチップ付きのゴミ箱アイコン（日本語 UI）"
 />
 
 <Warning>
-  Deleting a file permanently removes it from the folder. If the folder is attached to an agent, that content will no longer be available during calls.
+  削除するとフォルダから恒久的に除去されます。エージェントに添付している場合、通話でその内容は参照されなくなります。
 </Warning>
 
 ---
 
-## Step 9: Delete a Folder
+## ステップ 10: フォルダを削除する
 
-To remove an entire Infobase folder and all files inside it:
+フォルダ全体と中身をすべて削除する場合:
 
-1. Open the folder you want to delete (or select it from the **Infobases** list on the left).
-2. Click the **⋮** (three dots) menu in the top-right of the folder view, next to **+ Add Info**.
-3. Select **Delete** from the dropdown.
-4. Confirm the deletion when prompted.
+1. 削除するフォルダを開く（または左 **インフォベース** 一覧から選択）。
+2. **+ 情報追加** 横の **⋮**（三点メニュー）をクリックします。
+3. **削除** を選択します。
+4. 確認ダイアログで削除を確定します。
 
 <img
-  src="/images/Screenshot_delete_folder.png"
-  alt="Folder options menu open with Delete option"
+  src="/images/ja/ja_step10_delete_folder.png"
+  alt="削除メニューが表示されたフォルダオプション（日本語 UI）"
 />
 
 <Warning>
-  Deleting a folder removes all files and URLs inside it. Detach the folder from any agents first if you want to avoid broken attachments.
+  フォルダ削除は中のファイルと URL をすべて削除します。添付の不整合を避けるため、先にエージェントから外すことを推奨します。
 </Warning>
 
 ---
 
-## Summary
+## まとめ
 
-| Step | Action |
+| ステップ | 操作 |
 |---|---|
-| 1 | Navigate to Infobase from the sidebar |
-| 2 | Click **+** next to **Infobases** in the left menu, name the folder, and create it |
-| 3 | Open the folder and click **+ Add Info** |
-| 4 | Add a website URL or upload a file (PDF, DOCX, PPTX, TXT, CSV) |
-| 5 | Wait for **Ready**; use **↻** to refresh status manually |
-| 6 | Optionally assign team members to the folder |
-| 7 | Attach the folder to an agent via the Role tab and save |
-| 8 | Delete individual files using the trash icon on each row |
-| 9 | Delete an entire folder via the **⋮** menu → **Delete** |
+| 1 | サイドバーからインフォベースを開く |
+| 2 | 左メニュー **インフォベース** 横の **+** でフォルダを作成 |
+| 3 | フォルダを開き **+ 情報追加** をクリック |
+| 4 | Web サイト URL またはファイル（PDF、DOCX、PPTX、TXT、CSV）を追加 |
+| 5 | **Ready** まで待つ。**↻** で手動更新 |
+| 6 | ファイル名横のダウンロードアイコンで元ファイルを保存 |
+| 7 | 任意でチームメンバーをフォルダに割り当て |
+| 8 | **ロール** タブでフォルダを添付して **保存** |
+| 9 | 各行のゴミ箱アイコンでファイルを削除 |
+| 10 | **⋮** メニュー → **削除** でフォルダ全体を削除 |
 
 <Warning>
-  Files with **In Progress** status have not yet been indexed. Attaching a folder to an agent before all sources are **Ready** may result in incomplete knowledge coverage during calls.
+  **進行中** のソースはまだインデックスされていません。すべて **Ready** になる前にエージェントへ添付すると、通話時のナレッジが不完全になることがあります。
 </Warning>
