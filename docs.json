@@ -15,6 +15,12 @@
     "href": "https://oneinbox.ai"
   },
   "navigation": {
+    "global": {
+      "languages": [
+        { "language": "en", "default": true, "href": "/" },
+        { "language": "ja", "href": "/ja/index" }
+      ]
+    },
     "languages": [
       {
         "language": "en",
