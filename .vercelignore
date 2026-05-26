@@ -1,0 +1,6 @@
+node_modules
+out
+dist
+export.zip
+.git
+.DS_Store
