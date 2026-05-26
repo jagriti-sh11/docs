@@ -17,8 +17,7 @@
   "redirects": [
     { "source": "/", "destination": "/en", "permanent": false },
     { "source": "/index", "destination": "/en", "permanent": false },
-    { "source": "/user-guide", "destination": "/en/user-guide", "permanent": false },
-    { "source": "/ja/index", "destination": "/ja", "permanent": false }
+    { "source": "/user-guide", "destination": "/en/user-guide", "permanent": false }
   ],
   "navigation": {
     "global": {
