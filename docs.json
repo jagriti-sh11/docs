@@ -14,11 +14,17 @@
     "dark": "/logo/dark.svg",
     "href": "https://oneinbox.ai"
   },
+  "redirects": [
+    { "source": "/", "destination": "/en", "permanent": false },
+    { "source": "/index", "destination": "/en", "permanent": false },
+    { "source": "/user-guide", "destination": "/en/user-guide", "permanent": false },
+    { "source": "/ja/index", "destination": "/ja", "permanent": false }
+  ],
   "navigation": {
     "global": {
       "languages": [
-        { "language": "en", "default": true, "href": "/" },
-        { "language": "ja", "href": "/ja/index" }
+        { "language": "en", "default": true, "href": "/en" },
+        { "language": "ja", "href": "/ja" }
       ]
     },
     "languages": [
@@ -28,10 +34,7 @@
         "groups": [
           {
             "group": "Documentation",
-            "pages": [
-              { "page": "index", "title": "Introduction" },
-              { "page": "user-guide", "title": "Step-by-step guide" }
-            ]
+            "pages": ["en/index", "en/user-guide"]
           }
         ]
       },
@@ -40,10 +43,7 @@
         "groups": [
           {
             "group": "ドキュメント",
-            "pages": [
-              { "page": "ja/index", "title": "はじめに" },
-              { "page": "ja/user-guide", "title": "操作手順" }
-            ]
+            "pages": ["ja/index", "ja/user-guide"]
           }
         ]
       }
