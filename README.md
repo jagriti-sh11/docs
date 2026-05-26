@@ -12,3 +12,4 @@ mint dev
 ## Publish
 
 Connect to [Mintlify](https://dashboard.mintlify.com) and push to `main` to deploy.
+
