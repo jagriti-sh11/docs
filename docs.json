@@ -20,12 +20,6 @@
     { "source": "/user-guide", "destination": "/en/user-guide", "permanent": false }
   ],
   "navigation": {
-    "global": {
-      "languages": [
-        { "language": "en", "default": true, "href": "/en" },
-        { "language": "ja", "href": "/ja" }
-      ]
-    },
     "languages": [
       {
         "language": "en",
