@@ -15,10 +15,25 @@
     "href": "https://oneinbox.ai"
   },
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "Documentation",
-        "pages": ["index"]
+        "language": "en",
+        "default": true,
+        "groups": [
+          {
+            "group": "Documentation",
+            "pages": ["index"]
+          }
+        ]
+      },
+      {
+        "language": "ja",
+        "groups": [
+          {
+            "group": "ドキュメント",
+            "pages": ["ja/index"]
+          }
+        ]
       }
     ]
   }
